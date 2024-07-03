@@ -101,9 +101,12 @@ input, select, textarea {
 	body {
 		background-color: #2e3141;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
+		background-size: auto,
+ cover;
+		background-attachment: fixed,
+ fixed;
+		background-position: center,
+ center;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2988,83 +2991,142 @@ input, select, textarea {
 
 /* Features */
 
-	.features {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		margin: 0 0 2em 0;
+
+.features {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0 0 2em 0;
+	text-align: center;
+}
+
+.features article {
+	padding: 1.75em 1.75em 0.1em 1.75em;
+	background-color: #353849;
+	border-radius: 5px;
+	margin: 1.5em;
+	width: calc(33.33% - 3em);
+	box-sizing: border-box;
+}
+
+.features article:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+.features article:nth-child(3n) {
+	margin-right: 0;
+}
+
+.features article .image {
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 1.75em auto;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+}
+
+.features article .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 980px) {
+	.features article {
+		margin: 1em 0;
+		width: 100%;
 	}
 
-		.features article {
-			padding: 1.75em 1.75em 0.1em 1.75em ;
-			background-color: #353849;
-			border-radius: 5px;
-			margin: 1.5em 3em 1.5em 0;
-			width: calc(50% - 1.5em);
-		}
+	.features article .image {
+		width: 150px;
+		height: 150px;
+	}
+}
 
-			.features article:nth-child(2n) {
-				margin-right: 0;
-			}
+	/*.features {*/
+	/*	display: -moz-flex;*/
+	/*	display: -webkit-flex;*/
+	/*	display: -ms-flex;*/
+	/*	display: flex;*/
+	/*	-moz-flex-wrap: wrap;*/
+	/*	-webkit-flex-wrap: wrap;*/
+	/*	-ms-flex-wrap: wrap;*/
+	/*	flex-wrap: wrap;*/
+	/*	margin: 0 0 2em 0;*/
+	/*}*/
 
-			.features article .image {
-				border-radius: 5px 5px 0 0;
-				display: block;
-				margin-bottom: 1.75em;
-				margin-left: -1.75em;
-				margin-top: -1.75em;
-				position: relative;
-				width: calc(100% + 3.5em);
-			}
+	/*	.features article {*/
+	/*		padding: 1.75em 1.75em 0.1em 1.75em ;*/
+	/*		background-color: #353849;*/
+	/*		border-radius: 5px;*/
+	/*		margin: 1.5em 3em 1.5em 0;*/
+	/*		width: calc(50% - 1.5em);*/
+	/*	}*/
 
-				.features article .image img {
-					border-radius: 5px 5px 0 0;
-					width: 100%;
-				}
+	/*		.features article:nth-child(2n) {*/
+	/*			margin-right: 0;*/
+	/*		}*/
 
-		@media screen and (max-width: 980px) {
+	/*		.features article .image {*/
+	/*			border-radius: 5px 5px 0 0;*/
+	/*			display: block;*/
+	/*			margin-bottom: 1.75em;*/
+	/*			margin-left: -1.75em;*/
+	/*			margin-top: -1.75em;*/
+	/*			position: relative;*/
+	/*			width: calc(100% + 3.5em);*/
+	/*		}*/
 
-			.features article {
-				margin: 1em 2em 1em 0;
-				width: calc(50% - 1em);
-			}
+	/*			.features article .image img {*/
+	/*				border-radius: 5px 5px 0 0;*/
+	/*				width: 100%;*/
+	/*			}*/
 
-		}
+	/*	@media screen and (max-width: 980px) {*/
 
-		@media screen and (max-width: 736px) {
+	/*		.features article {*/
+	/*			margin: 1em 2em 1em 0;*/
+	/*			width: calc(50% - 1em);*/
+	/*		}*/
 
-			.features article {
-				padding: 1.5em 1.5em 0.1em 1.5em ;
-				margin: 0.875em 1.75em 0.875em 0;
-				width: calc(50% - 0.875em - 1px);
-			}
+	/*	}*/
 
-				.features article .image {
-					margin-bottom: 1.5em;
-					margin-left: -1.5em;
-					margin-top: -1.5em;
-					width: calc(100% + 3em);
-				}
+	/*	@media screen and (max-width: 736px) {*/
 
-		}
+	/*		.features article {*/
+	/*			padding: 1.5em 1.5em 0.1em 1.5em ;*/
+	/*			margin: 0.875em 1.75em 0.875em 0;*/
+	/*			width: calc(50% - 0.875em - 1px);*/
+	/*		}*/
 
-		@media screen and (max-width: 480px) {
+	/*			.features article .image {*/
+	/*				margin-bottom: 1.5em;*/
+	/*				margin-left: -1.5em;*/
+	/*				margin-top: -1.5em;*/
+	/*				width: calc(100% + 3em);*/
+	/*			}*/
 
-			.features {
-				display: block;
-			}
+	/*	}*/
 
-				.features article {
-					width: 100%;
-					margin: 0 0 2em 0 !important;
-				}
+	/*	@media screen and (max-width: 480px) {*/
 
-		}
+	/*		.features {*/
+	/*			display: block;*/
+	/*		}*/
+
+	/*			.features article {*/
+	/*				width: 100%;*/
+	/*				margin: 0 0 2em 0 !important;*/
+	/*			}*/
+
+	/*	}*/
 
 /* Header */
 
@@ -3376,6 +3438,7 @@ input, select, textarea {
 
 	#banner {
 		padding: 10em 0 4.75em 0 ;
+
 	}
 
 		#banner .inner {
@@ -3464,8 +3527,10 @@ input, select, textarea {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto, cover;
-				background-position: center, center;
+				background-size: auto,
+ cover;
+				background-position: center,
+ center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3574,8 +3639,10 @@ input, select, textarea {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 30%;
 			margin-bottom: -6.5em;
 		}
 
@@ -3585,8 +3652,10 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
-			background-size: auto, cover;
-			background-position: center, 0% 0%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 0%;
 			margin-bottom: -4.75em;
 		}
 
@@ -3600,7 +3669,8 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
-			background-size: auto, 125%;
+			background-size: auto,
+ 125%;
 			margin-bottom: -2.5em;
 		}
 
@@ -4062,8 +4132,10 @@ input, select, textarea {
 		#footer {
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, center;
+			background-size: auto,
+ cover;
+			background-position: center,
+ center;
 			margin-top: -6.5em;
 			padding-top: 6.5em;
 		}
@@ -4142,3 +4214,4 @@ input, select, textarea {
 		}
 
 	}
+

@@ -1,0 +1,15 @@
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
+.bootstrap-scope .btn,
+.bootstrap-scope .btn-primary,
+.bootstrap-scope .vh-100,
+.bootstrap-scope .w-100,
+.bootstrap-scope .floating-button,
+.bootstrap-scope .ol-popup,
+.bootstrap-scope .ol-popup-closer,
+.bootstrap-scope #map,
+.bootstrap-scope #popup,
+.bootstrap-scope #popup-closer,
+.bootstrap-scope #popup-content {
+    /* Optionally, you can add custom styles here */
+}

@@ -1,0 +1,127 @@
+/*.map {*/
+/*    width: 80%;*/
+/*    height: 700px;*/
+/*    margin: 0 auto;*/
+/*    border: 5px solid black !important;*/
+/*    z-index: 1000;*/
+/*}*/
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.floating-button {
+    position: absolute;
+    z-index: 999;
+    left: 50px;
+    top: 10px;
+}
+
+.wrapper.style2 {
+    background-color: #2e7947;
+}
+
+.banner-transparency {
+    opacity: 0.2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.custom-banner {
+    background-image: url('../../images/bg.jpg') !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: rgba(59, 59, 62, 0.75);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+.ol-popup:after {
+    border-top-color: #000000;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+
+}
+
+.ol-popup:before {
+    border-top-color: #fff5f5;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+
+}
+
+.ol-popup-closer {
+    color: #ff0000;
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.custom-control {
+    color: #000000;
+    bottom: 30px;
+    position: absolute;
+    right: 15px;
+    background: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+}
+
+/*/html/body/div/section[1]/div/div/div[1]/div[2]/div/div[3]/div[9]/div/ul*/
+#map div div div ul {
+    list-style-type:none;
+    font-size: medium;
+        padding: 0;
+        margin: 0;
+    border-bottom-width: medium;
+    border-color: #1642d1;
+}
+#map div div div .panel {
+    background-color: rgba(59, 59, 62, 0.75);
+    border-color: rgba(59, 59, 62, 0.75);
+}
+
+
+#map div div .ol-control button {
+    background-color: rgba(59, 59, 62, 0.75) ;
+
+}
+
+/*/html/body/div/section[1]/div/div/div[1]/div[2]/div/div[3]/div[2]*/
+/*#map div div div {*/
+/*    */
+/*    background-color: black;*/
+/*}*/
+

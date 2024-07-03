@@ -1,0 +1,36 @@
+{
+  "name": "geo_slide_map",
+  "version": "1.0.0",
+  "description": "website for Landslide Susceptibility Map",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --base=./",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Black-Lights/Geo_Slide_Map.git"
+  },
+  "keywords": [
+    "LandSlides",
+    "Map",
+    "Landslide",
+    "Susceptibility",
+    "Map",
+    "WebGIS."
+  ],
+  "author": "Ammar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Black-Lights/Geo_Slide_Map/issues"
+  },
+  "homepage": "https://github.com/Black-Lights/Geo_Slide_Map#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "glob": "^10.4.2",
+    "ol": "^9.2.4",
+    "ol-layerswitcher": "^4.1.2",
+    "vite": "^5.3.3"
+  }
+}
