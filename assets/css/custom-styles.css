@@ -11,12 +11,13 @@
     height: 100%;
 }
 
-.floating-button {
-    position: absolute;
-    z-index: 999;
-    left: 50px;
-    top: 10px;
-}
+/* Go home floating button */
+/*.floating-button {*/
+/*    position: absolute;*/
+/*    z-index: 999;*/
+/*    left: 50px;*/
+/*    top: 10px;*/
+/*}*/
 
 .wrapper.style2 {
     background-color: #2e7947;
@@ -90,12 +91,12 @@
 }
 
 .custom-control {
-    color: #000000;
+    /*color: #000000;*/
     bottom: 30px;
     position: absolute;
     right: 15px;
-    background: white;
-    border: 2px solid cadetblue;
+    background-color: rgba(59, 59, 62, 0.75);
+    border: 2px solid #313535;
     padding: 10px;
 }
 
@@ -124,4 +125,15 @@
 /*    */
 /*    background-color: black;*/
 /*}*/
+
+.opacity-control {
+    /*justify-content: center;*/
+    /*background-color: rgba(59, 59, 62, 0.75);*/
+}
+
+/*.opacity-control label {*/
+/*    align-content: center;*/
+/*    background-color: rgba(59, 59, 62, 0.75);*/
+/*}*/
+
 

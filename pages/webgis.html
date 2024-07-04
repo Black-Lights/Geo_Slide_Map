@@ -38,8 +38,6 @@
 				<li><a href="roadmap.html">Roadmap</a></li>
 				<li><a href="results.html">Results</a></li>
 				<li><a href="webgis.html">WebGIS</a></li>
-				<li><a href="webgis1.html">WebGIS1</a></li>
-				<li><a href="webgis2.html">WebGIS2</a></li>
 				<li><a href="#">Log In</a></li>
 				<li><a href="#">Sign Up</a></li>
 			</ul>
@@ -52,47 +50,32 @@
 		<header>
 			<div class="inner">
 				<h2>WebGIS - MAP</h2>
-				<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+				<p>Welcome to our interactive WebGIS map page, where you can explore a comprehensive array of geospatial data layers. Our map provides an intuitive interface for visualizing and analyzing diverse geographic information, including OpenStreetMap, topographic data, vegetation indices, land use, and more. With powerful tools like layer switcher, full-screen view, zoom slider, and feature information pop-ups, you can easily navigate and uncover insights about different regions. Dive into the map to discover detailed landscape features, infrastructure networks, environmental data, and socio-economic information, all at your fingertips.</p>
 			</div>
 		</header>
 		<!-- Map component container -->
 		<div class="wrapper">
 			<div class="inner">
+
+<!--				<iframe srcdoc="<div class='opacity-control'><label for='opacity'>Layer Opacity:</label>-->
+<!--				<input type='range' id='opacity' name='opacity' min='0' max='1' step='0.01' value='1'>-->
+<!--				</div>">-->
+<!--				</iframe>-->
+
 				<div class="map-container" style="width: 100%; margin: 0 auto; height: 700px; position: relative;">
-					<div class="floating-button" >
-						<a href="../index.html" class="btn btn-primary" style="color: #2e3141">Go Home</a>
-					</div>
+<!--					<div class="floating-button" >-->
+<!--						<a href="../index.html" class="btn btn-primary" style="color: #2e3141">Go Home</a>-->
+<!--					</div>-->
 					<div id="map" style="width: 100%; height: 100%;"></div>
+
 					<!-- The structure for the popup -->
 					<div id="popup" class="ol-popup">
 						<a href="#" id="popup-closer" class="ol-popup-closer">&times;</a>
 						<div id="popup-content"></div>
+
 					</div>
+
 				</div>
-
-				<h3 class="major">Lorem ipsum dolor</h3>
-				<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt.</p>
-
-				<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem.</p>
-
-				<h3 class="major">Vitae phasellus</h3>
-				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat.</p>
-
-				<section class="features">
-					<article>
-						<a href="#" class="image"><img src="../images/pic04.jpg" alt="" /></a>
-						<h3 class="major">Sed feugiat lorem</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-						<a href="#" class="special">Learn more</a>
-					</article>
-					<article>
-						<a href="#" class="image"><img src="../images/pic05.jpg" alt="" /></a>
-						<h3 class="major">Nisl placerat</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-						<a href="#" class="special">Learn more</a>
-					</article>
-				</section>
-
 			</div>
 		</div>
 
@@ -101,41 +84,8 @@
 	<!-- Footer -->
 	<section id="footer">
 		<div class="inner">
-			<h2 class="major">Get in touch</h2>
-			<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat.</p>
-			<form method="post" action="#">
-				<div class="fields">
-					<div class="field">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" />
-					</div>
-					<div class="field">
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" />
-					</div>
-					<div class="field">
-						<label for="message">Message</label>
-						<textarea name="message" id="message" rows="4"></textarea>
-					</div>
-				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" /></li>
-				</ul>
-			</form>
-			<ul class="contact">
-				<li class="icon solid fa-home">
-					Untitled Inc<br />
-					1234 Somewhere Road Suite #2894<br />
-					Nashville, TN 00000-0000
-				</li>
-				<li class="icon solid fa-phone">(000) 000-0000</li>
-				<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-				<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-				<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-				<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-			</ul>
 			<ul class="copyright">
-				<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				<li>&copy; Geo Slide Map Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</div>
 	</section>
