@@ -137,3 +137,37 @@
 /*}*/
 
 
+/* Add some basic styling to position charts side by side */
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow charts to wrap on smaller screens */
+}
+.chart-wrapper {
+    width: 45%;
+}
+
+/* Adjust layout for mobile devices */
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column; /* Stack charts vertically on small screens */
+    }
+    .chart-wrapper {
+        width: 100%; /* Make charts full width on small screens */
+        margin-bottom: 20px; /* Add some space between charts */
+        justify-items: center;
+    }
+}
+.metric {
+    margin: 10px;
+
+}
+.formula {
+    font-family: "Courier New", monospace;
+    color: #000;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+}

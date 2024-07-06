@@ -1,0 +1,752 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Geo Slide Map - Methodology</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/custom-styles.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<!-- Include MathJax for LaTeX rendering -->
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Geo Slide Map</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="overview.html">Overview</a></li>
+							<li><a href="methodology.html">Methodology</a></li>
+							<li><a href="results.html">Results</a></li>
+							<li><a href="webgis.html">WebGIS</a></li>
+
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Methodology</h2>
+								<p>Our methodology integrates advanced GIS techniques and statistical analysis to evaluate landslide susceptibility. We employ comprehensive data preprocessing, model training and testing, and population impact assessment to ensure precise and actionable results.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+						<div class="wrapper">
+							<div class="inner">
+
+								<section>
+									<h2 class="major">Introduction</h2>
+									<b><BLOCKQUOTE style="color: red">Decide the above heading whether it should be introduction or something else.</BLOCKQUOTE> </b>
+									<p>The methodology employed for this project involves a comprehensive analysis of various geospatial data layers to produce a detailed landslide susceptibility map. The process integrates data collection, preprocessing, analysis, classification, modeling, and accuracy assessment to ensure reliable and actionable insights for landslide risk management.</p>
+									<h3>Data Collection and Preprocessing</h3>
+										<ol>
+
+											<!--Data Collection-->
+											<b><li>Data Collection:</li></b>
+												<ul>
+													<li><b>Digital Terrain Model (DTM):</b> Provides elevation data for terrain analysis.</li>
+													<li><b>DUSAF (Land Use and Land Cover):</b> Offers information on land cover and usage patterns.</li>
+													<li><b>Roads and Rivers:</b> Critical infrastructure data influencing slope stability.</li>
+													<li><b>Faults:</b> Geological fault lines affecting terrain stability.</li>
+													<li><b>Landslide Inventory:</b> Historical landslide data for validation and calibration.</li>
+													<li><b>NDVI (Normalized Difference Vegetation Index):</b> Vegetation health and density indicator.</li>
+													<li><b>Shapefile for Area of Interest:</b> Defines the geographical boundary of the study area.</li>
+												</ul>
+<!--Preprocessing-->
+											<b><li>Preprocessing:</li></b>
+												<ul>
+													<li><b>Clipping:</b> Trim layers to match the area of interest.</li>
+													<li><b>Reprojecting:</b> Convert all layers to a common Coordinate Reference System (CRS).</li>
+													<li><b>Grouping:</b> Organize layers based on data types and relevance.</li>
+												</ul>
+										</ol>
+
+<!--Data Anlysis-->
+									<h3>Data Analysis</h3>
+										<ol>
+<!--Aspect-->
+											<B><li>Aspect Analysis</li></B>
+											<h4>Aspect Analysis</h4>
+											<b><blockquote style="color: red"> Decide which heading is better</blockquote></b>
+
+											<P> Aspect refers to the compass direction that a slope faces and significantly influences landslide susceptibility by affecting moisture distribution, sun exposure, vegetation patterns, snow accumulation and melt, and erosion patterns. </P>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/aspect.png" alt="" /></span></div>
+
+												</div>
+											</div>
+											<p>Here is a detailed explanation of how aspect impacts landslide susceptibility mapping:</p>
+												<ul>
+													<li><b>Moisture Distribution:</b>
+													<P>Slopes facing different directions receive varying amounts of sunlight, which affects evaporation rates. North-facing slopes receive less direct sunlight, resulting in higher moisture retention, while south-facing slopes receive more direct sunlight, leading to faster evaporation and potentially drier conditions. Drier slopes may have reduced cohesion, increasing their susceptibility to landslides in specific geological and environmental contexts.</P></li>
+													<li><b>Vegetation Patterns:</b>
+													<p>Aspect affects vegetation patterns on slopes due to differences in sunlight exposure. Various types of vegetation can influence slope stability, with some species providing root reinforcement and stability. Variations in vegetation cover related to aspect can thus contribute to differences in landslide susceptibility.</p></li>
+													<li><b>Snow Accumulation and Melt:</b>
+													<p>Aspect influences snow accumulation and melt patterns on slopes. North-facing slopes generally retain snow longer, leading to increased water content during melting periods. This additional water can raise pore pressures and reduce stability, potentially increasing the likelihood of landslides.</p></li>
+													<li><b>Erosion Patterns:</b>
+													<p>Aspect can affect erosion patterns on slopes due to variations in wind and water exposure. Erosion processes remove soil or rock from the slope, weakening its stability. Differences in erosion related to aspect can influence the overall susceptibility to landslides.</p></li>
+												</ul>
+<!--Slope-->
+											<b><li>Slope Analysis:</li></b>
+<!--											<h4>Slope Analysis:</h4>-->
+											<p>Steep slopes increase the likelihood of landslides due to reduced stability and weaker resistance to gravitational forces. Slope plays a fundamental role in landslide susceptibility mapping, which aims to identify areas more prone to landslides based on various contributing factors.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/slope.png" alt="" /></span></div>
+
+												</div>
+											</div>
+											<p>Here's how slope impacts landslide susceptibility mapping:</p>
+											<ul>
+												<li><b>Quantifying Slope Steepness:</b>
+													<p>Slope steepness is one of the primary factors considered in landslide susceptibility mapping. It is usually quantified using slope angles or gradient measurements derived from DTMs. Steeper slopes are generally associated with higher landslide susceptibility, as they have a weaker resistance to gravitational forces and are more prone to failure.</p>
+												</li>
+												<li><b>Classifying Slope Categories:</b>
+													<p>Slopes are typically classified into different categories based on their steepness. These categories can range from gentle slopes (low gradient) to very steep slopes (high gradient). By assigning different weights or probabilities to each slope category, susceptibility maps can highlight areas with varying degrees of landslide susceptibility. In this project, slopes were classified into landslide and no landslide zones based on their steepness: if the slope is less than 20 degrees or greater than 70 degrees <code>("slope@1" &lt; 20 OR "slope@1" &gt; 70)</code>, it is classified as a no landslide zone. Otherwise, there is a possibility of landslides.</p>
+												</li>
+												<li><b>Influence on Other Factors:</b>
+												<p>Slope steepness can also influence other contributing factors that affect landslide susceptibility. For example, steep slopes tend to have poorer drainage, which can result in higher water content and increased pore pressures. This weakens the slope materials, making them more susceptible to landslides. Steeper slopes can also enhance the effects of erosion and sediment transport, further increasing landslide susceptibility.</p></li>
+												<li><b>Incorporating Slope Stability Analysis:</b>
+												<p>In landslide susceptibility mapping, slope stability analysis is often employed to assess the potential for slope failure. The stability analysis takes into account factors such as slope angle, soil properties, groundwater conditions, and triggering events to evaluate slope stability. The results of such analyses can identify areas with higher susceptibility to landslides.</p></li>
+												<li><b>Integration with Other Factors:</b>
+												<p>Slope steepness is typically combined with other contributing factors, such as geology, soil type, land cover, precipitation patterns, and historical landslide data, to create comprehensive landslide susceptibility maps. By considering slope steepness along with these factors, a more accurate and reliable assessment of landslide susceptibility can be achieved.</p></li>
+											</ul>
+											<p>It is important to note that landslide susceptibility mapping is a complex process that requires the integration of multiple factors and data sources. Slope steepness, derived from DTMs, is just one aspect among many that contribute to the overall understanding of landslide susceptibility in a given area.</p>
+
+<!--DUSAF-->
+											<b><li>Land Use and Land Cover Analysis:</li></b>
+											<p>Land use and land cover significantly influence landslide susceptibility mapping by impacting slope stability through vegetation cover, soil erosion, urbanization, and water management practices.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/dusaf.png" alt="" /></span></div>
+
+												</div>
+											</div>
+											<p>Here are some specific ways in which land use and land cover affect landslide susceptibility mapping:</p>
+												<ul>
+													<li><b>Vegetation Cover:</b>
+													<p>Dense vegetation, such as forests or grasslands, can provide root reinforcement and stabilize slopes, reducing the risk of landslides. Vegetation intercepts rainfall, reducing erosion and water infiltration into the soil, which helps maintain slope stability. Areas with extensive deforestation or sparse vegetation cover are more susceptible to landslides.</p></li>
+													<li><b>Land Management Practices:</b>
+													<p>Human activities like agriculture, construction, and deforestation can alter the natural landscape, potentially increasing landslide susceptibility. Clearing vegetation, improper land grading, and uncontrolled soil excavation can weaken slope stability, leading to higher landslide risks.</p></li>
+													<li><b>Urbanization and Infrastructure:</b>
+													<p>Urban development can significantly modify the natural terrain, leading to changes in slope stability. Construction of buildings, roads, and other infrastructure can alter drainage patterns, increase surface runoff, and introduce artificial slopes that may be more susceptible to landslides.</p></li>
+
+<!--Fault-->
+												</ul>
+											<b><li>Fault Analysis:</li></b>
+											<p>Faults, which are geological fractures in the Earth's crust, can significantly influence landslide susceptibility mapping by creating zones of weakness and potential failure along their boundaries. </p>
+												<div class="box alt">
+													<div class="row gtr-uniform">
+														<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/faults.png" alt="" /></span></div>
+
+													</div>
+												</div>
+
+											<p>Here are specific ways in which faults impact landslide susceptibility mapping:</p>
+												<ul>
+													<li><b>Zones of Weakness:</b>
+													<p>Faults create zones of weakness along their boundaries, where rock layers may be fractured or weakened. These weakened zones can increase the likelihood of slope instability and landslides, as the faults provide pathways for the movement of water and contribute to the reduction of slope cohesion.</p></li>
+													<li><b>Influence on Slope Stability:</b>
+													<p>Faults can disrupt the continuity and stability of slopes. They can intersect or cut across slope materials, leading to differential movement and increased stress concentrations. This disruption can reduce overall slope stability and increase the potential for landslides.</p></li>
+													<li><b>Triggering Events:</b>
+													<p>Faults can influence the occurrence of triggering events such as earthquakes. Earthquakes along faults can generate strong ground shaking that can induce landslides in adjacent slopes. The presence of faults, especially active faults, can indicate increased seismic activity and higher landslide susceptibility in the surrounding areas.</p></li>
+													<li><b>Data Integration:</b>
+													<p>Incorporating fault data into landslide susceptibility mapping allows for a comprehensive assessment of the terrain. Combining fault location, geometry, and activity information with other factors such as topography, soil properties, and land cover provides a more accurate understanding of the areas prone to landslides.</p></li>
+												</ul>
+											<p>Understanding the presence, characteristics, and activity of faults is crucial in landslide susceptibility mapping. It helps identify areas where slope stability may be compromised and aids in assessing the potential risks associated with landslides.</p>
+
+<!--NDVI-->
+											<b><li>Vegetation Health Analysis:</li></b>
+												<p>The Normalized Difference Vegetation Index (NDVI) is a remote sensing technique used in landslide susceptibility mapping to assess vegetation health and density, providing insights into slope stability and erosion control. NDVI significantly impacts landslide susceptibility mapping by highlighting areas of robust vegetation cover and identifying regions at higher risk due to sparse vegetation. </p>
+													<div class="box alt">
+														<div class="row gtr-uniform">
+															<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/ndvi.png" alt="" /></span></div>
+														</div>
+													</div>
+												<p>Here are specific ways in which NDVI impacts landslide susceptibility mapping:</p>
+												<ul>
+													<li><B>Vegetation Cover Assessment:</B>
+														<P>NDVI measures the density and health of vegetation by analyzing the difference in reflectance between near-infrared and red light. Vegetation acts as a natural stabilizer of slopes, and areas with dense and healthy vegetation cover are generally more resistant to landslides. NDVI helps identify areas with robust vegetation cover, which indicates a lower susceptibility to landslides.</P></li>
+													<li><b>Identification of Bare Soil or Exposed Areas:</b>
+														<p>NDVI can highlight areas with low or negative values, indicating the absence or minimal presence of vegetation cover. Bare soil or exposed areas are more susceptible to erosion and slope instability, increasing the risk of landslides. By mapping areas with low NDVI values, landslide susceptibility assessments can focus on areas requiring interventions to improve vegetation cover.</p></li>
+													<li><b>Integration with Other Data:</b>
+														<p>NDVI data can be integrated with other factors such as topography, geology, and rainfall patterns to create comprehensive landslide susceptibility maps. By combining NDVI with these data layers, the influence of vegetation on slope stability can be assessed in conjunction with other contributing factors, enhancing the accuracy of the susceptibility mapping.</p></li>
+
+												</ul>
+										</ol>
+									<p>NDVI, as a valuable remote sensing tool, provides crucial information on vegetation health, density, and changes, enabling a better understanding of the role of vegetation in slope stability and landslide susceptibility. Integrating NDVI data into landslide susceptibility mapping allows for targeted interventions and management strategies to mitigate landslide risks.</p>
+
+					</section>
+
+					<section>
+<!--CLASSIFICATION-->
+								<h2 class="major">Classification</h2>
+									<p>Classification in the context of landslide susceptibility mapping refers to the process of categorizing different areas within a geographical region based on their likelihood of experiencing landslides. This categorization is achieved by analyzing various geospatial and environmental factors that contribute to landslide occurrences. The primary objective is to create a predictive model that can distinguish between landslide-prone areas and stable, non-landslide areas.</p>
+										<h4>Key Elements of Classification in Landslide Susceptibility Mapping</h4>
+											<ol>
+												<li>Data Collection: Gathering relevant geospatial datasets such as Digital Terrain Models (DTM), land use/land cover maps, fault lines, historical landslide inventory, and vegetation indices. These datasets provide the necessary input variables for the classification process.</li>
+												<li>Feature Extraction: Deriving important features from the collected data, such as slope, aspect, elevation, proximity to roads and rivers, and vegetation health. These features are critical for identifying patterns and characteristics associated with landslide occurrences.</li>
+												<li>Training and Testing Dataset Creation: Dividing the collected data into training and testing sets. The training set is used to build the classification model, while the testing set is used to evaluate its performance. In landslide susceptibility mapping, this involves selecting points within landslide zones (LZ) and non-landslide zones (NLZ) to ensure a balanced and representative sample.</li>
+												<li>Model Training: Applying machine learning algorithms to the training dataset to learn the patterns and relationships between the input features and the target variable (landslide susceptibility). Commonly used algorithms include logistic regression, decision trees, support vector machines, and neural networks.</li>
+												<li>Model Testing and Validation: Evaluating the trained model using the testing dataset to assess its accuracy and generalization capability. This involves calculating metrics such as accuracy, precision, recall, and the F1-score, as well as visualizing the results through confusion matrices and ROC curves.</li>
+												<li>Classification Output: Producing a landslide susceptibility map that categorizes the study area into different susceptibility zones (e.g., high, medium, low). This map serves as a valuable tool for risk management, urban planning, and disaster mitigation efforts.</li>
+											</ol>
+
+									<h3>Practical Implementation in Landslide Susceptibility Assessment</h3>
+										<h4>Landslide Susceptibility Assessment: Training and Testing</h4>
+											<p>The landslide susceptibility assessment employed a robust methodology using a dataset of 1000 points, divided into two distinct groups: landslide zones (LZ) and non-landslide zones (NLZ). This dataset was strategically split to ensure a balanced and comprehensive evaluation of the model’s performance.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/train_test.png" alt="" /></span></div>
+												</div>
+											</div>
+
+<!--									1st table option -->
+										<h4>Dataset Composition</h4>
+											<div class="table-wrapper">
+												<table class="alt">
+													<thead>
+													<tr>
+														<th>Zone</th>
+														<th>Training Points</th>
+														<th>Testing Points</th>
+														<th>Total Points</th>
+
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td>Landslide Zones (LZ)</td>
+														<td>350</td>
+														<td>150</td>
+														<td>500</td>
+
+													</tr>
+													<tr>
+														<td>Non-Landslide Zones (NLZ)</td>
+														<td>350</td>
+														<td>150</td>
+														<td>500</td>
+													</tr>
+													</tbody>
+													<tfoot>
+													<tr>
+														<td colspan="3"></td>
+														<td><b>1000</b></td>
+													</tr>
+													</tfoot>
+												</table>
+											</div>
+
+		<!--2nd option: in my opinion this one is good-->
+										<h4>Dataset Composition</h4>
+											<div class="table-wrapper">
+												<table class="alt">
+													<thead>
+													<tr>
+														<th>Zone</th>
+														<th>Train/Test</th>
+														<th>Points</th>
+														<th>Total</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td rowspan="2" style="align-content: center !important;">Landslide Zones (LZ)</td>
+														<td>Training the Model</td>
+														<td>350</td>
+														<td rowspan="4" style="align-content: center !important;">1000</td>
+													</tr>
+													<tr>
+														<td>Testing the Model</td>
+														<td>150</td>
+													</tr>
+													<tr>
+														<td rowspan="2" style="align-content: center !important;">Non-Landslide Zones (NLZ)</td>
+														<td>Training the Model</td>
+														<td>350</td>
+													</tr>
+													<tr>
+														<td>Testing the Model</td>
+														<td>150</td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+
+										<b><blockquote style="color: red">Discuss with Umayr and Erfan and choose any one of the above table.</blockquote></b>
+
+<!--Mwthodological Approach-->
+										<h4>Methodological Approach</h4>
+											<ol>
+												<li><b>Balanced Distribution:</b>
+													<p>Ensuring an equal number of points from both landslide and non-landslide zones in the training and testing sets prevents bias and promotes a fair evaluation of the model's performance.</p></li>
+												<li><b>Diverse Data Exposure:</b>
+													<p>Exposing the model to a wide range of data representing different terrains and conditions enhances its robustness and reliability in predicting landslide susceptibility.</p></li>
+												<li><b>Rigorous Evaluation:</b>
+													<p>The balanced and structured approach allows for a comprehensive assessment of the model’s effectiveness, identifying areas for improvement and ensuring high accuracy in real-world applications.</p></li>
+											</ol>
+										<p>The classification process in landslide susceptibility mapping is crucial for creating accurate and reliable predictive models. By employing a structured methodology that includes balanced training and testing datasets, feature extraction, and rigorous evaluation, we can develop models that effectively identify high-risk areas and contribute to better risk management and disaster preparedness.</p>
+<!--Modelling-->
+									<h3>Modeling</h3>
+										<h4>Classification and Confidence Mapping</h4>
+										<p>Using the Dzetsaka plugin in QGIS, we performed the classification of landslide susceptibility, which resulted in two key outputs: the Classification Map and the Confidence Map. The Classification Map indicates the identified zones of landslide susceptibility, while the Confidence Map provides a measure of the confidence in the correctness of these classifications.</p>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-6"><span class="image fit" style="max-width: 100%; margin: 0 auto !important;"><img src="../images/data/classification.png" alt="" /></span></div>
+												<div class="col-6"><span class="image fit" style="max-width: 100%; margin: 0 auto !important;"><img src="../images/data/confidenceMap.png" alt="" /></span></div>
+											</div>
+										</div>
+
+										<h4>Creating the Landslide Susceptibility Map</h4>
+										<p>The Dzetsaka plugin does not directly provide a probability map. Therefore, we employed a workaround using the Confidence Map and the Classification Map to derive the Landslide Susceptibility Map, which indicates the probability of landslide occurrence at each point. This was accomplished using the following formula in the Raster Calculator:</p>
+										<pre><code>Landslide Susceptibility Map ="classification@1"=2)×"confidence@1"+("classification@1"=1)×(100−"confidence@1")</code></pre>
+										<p>In this formula:</p>
+										<ul>
+											<li><code>"classification@1"=2</code> corresponds to landslide-prone areas.</li>
+											<li><code>"classification@1"=1</code> corresponds to non-landslide-prone areas.</li>
+											<li><code>"confidence@1"</code> is the confidence value indicating the likelihood of the correct classification.</li>
+										</ul>
+										<p>By applying this formula, we created a map that displays the probability of landslide occurrence at each point, effectively translating the confidence levels into a probabilistic landslide susceptibility model.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/susceptibilty_map.png" alt="" /></span></div>
+
+											</div>
+										</div>
+<!--Accuracy assessment-->
+									<h3>Accuracy Assessment</h3>
+									<p>To assess the accuracy of our landslide susceptibility model, we used a Python script named <em>Accuracy_assessment_and_sampling.py</em> within QGIS. This script allows us to construct a confusion matrix, which is essential for evaluating the model's performance. </p>
+									<p>The process involves:</p>
+										<ol>
+											<li><b>Input Data:</b> The script takes two inputs:</li>
+											<ul>
+												<li><em>testingpointsSampled</em> : The sample points used for testing.</li>
+												<li><em>classification raster</em> : The classification map produced by the model.</li>
+											</ul>
+											<li><b>Output:</b> The script outputs an Error Matrix in CSV format, providing detailed information on the classification accuracy, including true positives, false positives, true negatives, and false negatives.</li>
+										</ol>
+
+										<h4>Accuracy table</h4>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+												<tr>
+													<th>Thematic Class/Hazard</th>
+													<th>No Landslide Zone</th>
+													<th>Landslide Zone</th>
+													<th>User Accuracy</th>
+													<th>Producer Accuracy</th>
+													<th>Overall Accuracy</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>No Landslide Zone</td>
+													<td>94</td>
+													<td>39</td>
+													<td>0.71</td>
+													<td>0.63</td>
+													<td rowspan="2" style="align-content: center;">0.6833333</td>
+												</tr>
+												<tr>
+													<td>Landslide Zone</td>
+													<td>56</td>
+													<td>111</td>
+													<td>0.66</td>
+													<td>0.74</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<h4>Confusion Matrix for Thematic Class/Hazard Analysis</h4>
+										<p>The confusion matrix presented below summarizes the performance of the classification model in predicting the Landslide Zone versus No Landslide Zone.</p>
+
+										<h4>Confusion Matrix for Thematic Class/Hazard Analysis</h4>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+												<tr>
+													<th></th>
+													<th>Predicted No Landslide Zone</th>
+													<th>Predicted Landslide Zone</th>
+													<th>Row Total</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td><b>Actual No Landslide Zone</b></td>
+													<td>94</td>
+													<td>39</td>
+													<td>133</td>
+												</tr>
+												<tr>
+													<td><b>Actual Landslide Zone</b></td>
+													<td>56</td>
+													<td>111</td>
+													<td>167</td>
+												</tr>
+												<tr>
+													<td><b>Column Total</b></td>
+													<td>150</td>
+													<td>150</td>
+													<td>300</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+
+
+										<h4>Performance Metrics</h4>
+										<P>Based on the confusion matrix, several performance metrics can be calculated to evaluate the effectiveness of the classification model. The metrics are defined and computed as follows:</P>
+
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+												<tr>
+													<th>Metric</th>
+													<th>Value</th>
+													<th>Formula</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>Sensitivity (True Positive Rate)</td>
+													<td>0.74</td>
+													<td>\(\frac{\text{TP}}{\text{TP} + \text{FN}}\)</td>
+												</tr>
+												<tr>
+													<td>Specificity (True Negative Rate)</td>
+													<td>0.63</td>
+													<td>\(\frac{\text{TN}}{\text{TN} + \text{FP}}\)</td>
+												</tr>
+												<tr>
+													<td>Precision</td>
+													<td>0.66</td>
+													<td>\(\frac{\text{TP}}{\text{TP} + \text{FP}}\)</td>
+												</tr>
+												<tr>
+													<td>Negative Predictive Value (NPV)</td>
+													<td>0.71</td>
+													<td>\(\frac{\text{TN}}{\text{TN} + \text{FN}}\)</td>
+												</tr>
+												<tr>
+													<td>False Positive Rate (FPR)</td>
+													<td>0.37</td>
+													<td>\(\frac{\text{FP}}{\text{TN} + \text{FP}}\)</td>
+												</tr>
+												<tr>
+													<td>False Negative Rate (FNR)</td>
+													<td>0.26</td>
+													<td>\(\frac{\text{FN}}{\text{TP} + \text{FN}}\)</td>
+												</tr>
+												<tr>
+													<td>F1 Score</td>
+													<td>0.70</td>
+													<td>2 \(\cdot \frac{\text{Precision} \cdot \text{Sensitivity}}{\text{Precision} + \text{Sensitivity}}\)</td>
+												</tr>
+												<tr>
+													<td>Overall Accuracy</td>
+													<td>0.6833</td>
+													<td>\(\frac{\text{TP} + \text{TN}}{\text{Total}}\)</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="metrics-wrapper">
+											<h3>Performance Metrics definitions and calculations</h3>
+
+											<div class="metric">
+												<h4>Sensitivity (True Positive Rate)</h4>
+												<p><b>Definition:</b> Sensitivity measures the proportion of actual positive cases (Landslide Zone) that were correctly identified by the model.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													Sensitivity = \(\frac{\text{TP}}{\text{TP} + \text{FN}}\) = \(\frac{111}{111 + 39}\) ≈ 0.74
+												</p>
+												<p><b>Interpretation:</b> The model correctly identified 74% of the actual Landslide Zone cases. This indicates that the model is relatively effective at detecting positive instances.</p>
+											</div>
+
+											<div class="metric">
+												<h5>Specificity (True Negative Rate)</h5>
+												<p><b>Definition:</b> Specificity measures the proportion of actual negative cases (No Landslide Zone) that were correctly identified by the model.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													Specificity = \(\frac{\text{TN}}{\text{TN} + \text{FP}}\) = \(\frac{94}{94 + 56}\) ≈ 0.63
+												</p>
+												<p><b>Interpretation:</b> The model correctly identified 63% of the actual No Landslide Zone cases. This suggests that the model is somewhat effective at avoiding false positives but has room for improvement.</p>
+											</div>
+
+											<div class="metric">
+												<h5>Positive Predictive Value (PPV) / Precision</h5>
+												<p><b>Definition:</b> Precision measures the proportion of predicted positive cases that are actually positive.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													Precision = \(\frac{\text{TP}}{\text{TP} + \text{FP}}\) = \(\frac{111}{111 + 56}\) ≈ 0.66
+												</p>
+												<p><b>Interpretation:</b> Of all the cases predicted as Landslide Zone, 66% were correctly identified as such. This reflects a moderate level of confidence in the positive predictions made by the model.</p>
+											</div>
+
+											<div class="metric">
+												<h5>Negative Predictive Value (NPV)</h5>
+												<p><b>Definition:</b> NPV measures the proportion of predicted negative cases that are actually negative.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													NPV = \(\frac{\text{TN}}{\text{TN} + \text{FN}}\) = \(\frac{94}{94 + 39}\) ≈ 0.71
+												</p>
+												<p><b>Interpretation:</b> Of all the cases predicted as No Landslide Zone, 71% were correctly identified as such. This indicates a reasonable level of confidence in the negative predictions made by the model.</p>
+											</div>
+
+											<div class="metric">
+												<h5>False Positive Rate (FPR)</h5>
+												<p><b>Definition:</b> FPR measures the proportion of actual negative cases that were incorrectly identified as positive.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													FPR = \(\frac{\text{FP}}{\text{TN} + \text{FP}}\) = \(\frac{56}{94 + 56}\) ≈ 0.37
+												</p>
+												<p><b>Interpretation:</b> 37% of actual No Landslide Zone cases were incorrectly classified as Landslide Zone. This suggests a higher incidence of false positives.</p>
+											</div>
+
+											<div class="metric">
+												<h5>False Negative Rate (FNR)</h5>
+												<p><b>Definition:</b> FNR measures the proportion of actual positive cases that were incorrectly identified as negative.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													FNR = \(\frac{\text{FN}}{\text{TP} + \text{FN}}\) = \(\frac{39}{111 + 39}\) ≈ 0.26
+												</p>
+												<p><b>Interpretation:</b> 26% of actual Landslide Zone cases were incorrectly classified as No Landslide Zone. This indicates that the model misses a significant portion of true positive instances.</p>
+											</div>
+
+											<div class="metric">
+												<h5>F1 Score</h5>
+												<p><b>Definition:</b> The F1 Score is the harmonic mean of precision and sensitivity, providing a single metric that balances the two aspects of model performance.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													F1 Score = \(2 \cdot \frac{\text{Precision} \cdot \text{Sensitivity}}{\text{Precision} + \text{Sensitivity}}\) = \(2 \cdot \frac{0.66 \cdot 0.74}{0.66 + 0.74}\) ≈ 0.70
+												</p>
+												<p><b>Interpretation:</b> The F1 Score of 0.70 indicates a balanced performance in terms of precision and sensitivity, reflecting a moderate overall performance of the model.</p>
+											</div>
+
+											<div class="metric">
+												<h5>Overall Accuracy</h5>
+												<p><b>Definition:</b> Overall accuracy measures the proportion of total predictions that were correct.</p>
+												<p><b>Calculation:</b></p>
+												<p class="formula">
+													Overall Accuracy = \(\frac{\text{TP} + \text{TN}}{\text{Total}}\) = \(\frac{111 + 94}{300}\) ≈ 0.6833
+												</p>
+												<p><b>Interpretation:</b> An overall accuracy of 68.33% indicates that the model correctly classified about two-thirds of the cases. This metric provides a general sense of the model's performance across all classes.</p>
+											</div>
+										</div>
+
+
+
+
+										<h4>Accuracy Metrics</h4>
+										<ul>
+											<li><b>User Accuracy for No Landslide Zone:</b> 0.71</li>
+											<li><b>Producer Accuracy for No Landslide Zone:</b> 0.71</li>
+											<li><b>User Accuracy for Landslide Zone:</b> 0.74</li>
+											<li><b>Producer Accuracy for Landslide Zone:</b> 0.74</li>
+											<li><b>Overall Accuracy:</b> 0.6833</li>
+										</ul>
+
+
+									<b><blockquote style="color: red">We need to check Error Matrix or  table of accuracy here.</blockquote></b>
+										<p>The accuracy assessment helps us to understand the reliability and precision of the landslide susceptibility model, ensuring that the predictions made by the model are trustworthy and actionable for risk management purposes.</p>
+
+<!--Population Data-->
+									<h3>Population Data Integration and Analysis</h3>
+										<h4>Population Data Preparation</h4>
+										<p>To assess the impact of landslide susceptibility on the local population, we integrated population data for Italy obtained from <a href="http://www.worldpop.org" target="_blank">WorldPop</a>. The following steps were taken to prepare the population data for our study area:</p>
+										<ol>
+											<li><b>Downloading and Reprojecting:</b> The population data was downloaded and reprojected to match the Coordinate Reference System (CRS) of the Landslide Susceptibility Map.</li>
+											<li><b>Clipping:</b> We clipped the population layer to extract the data specific to our study area, ensuring that the population data corresponded precisely to the geographical bounds of our landslide susceptibility analysis.</li>
+										</ol>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/population.png" alt="" /></span></div>
+
+											</div>
+										</div>
+
+										<h4>Reclassifying the Landslide Susceptibility Map</h4>
+										<p>The Landslide Susceptibility Map was reclassified into four distinct susceptibility classes to facilitate a detailed population impact analysis. This was done using the "Reclassify by Table" tool in QGIS, with the following classification scheme:</p>
+										<ul>
+											<li>Low Susceptibility: [0-25%)</li>
+											<li>Moderate Susceptibility: [25-50%)</li>
+											<li>High Susceptibility: [50-75%)</li>
+											<li>Very High Susceptibility: [75-100%]</li>
+										</ul>
+	<!--Reclassification map-->
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/Landslide%20Susceptibility%20Reclassified.png" alt="" /></span></div>
+
+											</div>
+										</div>
+
+										<h4>Resampling for Consistent Resolution</h4>
+										<p>To ensure consistency in pixel sizes between the Landslide Susceptibility Map and the Population Map, we resampled the Landslide Susceptibility Map to match the resolution of the Population Map (81.67 meters). This was achieved using the <em>r.resam.stats</em> tool in QGIS. This step was crucial for accurate overlay and subsequent statistical analysis.</p>
+										<h4>Population Distribution Analysis</h4>
+										<p>We employed the <em>"Zonal Statistics"</em> tool to analyze the distribution of the population across the different susceptibility classes. The zonal statistics provided insights into how the population was distributed in each of the susceptibility zones (low, moderate, high, and very high). This analysis helps in understanding the potential human impact and identifying high-risk areas that may require targeted risk management strategies.</p>
+
+
+	<!--Population table									-->
+										<h4>Population Distribution Across Susceptibility Zones</h4>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+												<tr>
+													<th>Zone</th>
+													<th>Area (m²)</th>
+													<th>Sum</th>
+													<th>Count</th>
+													<th>Min</th>
+													<th>Max</th>
+													<th>Mean</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>Low Susceptibility (Zone 3)</td>
+													<td>6,109,496.73</td>
+													<td>9,909.74</td>
+													<td>916</td>
+													<td>0.00</td>
+													<td>68.24</td>
+													<td>10.82</td>
+												</tr>
+												<tr>
+													<td>Moderate Susceptibility (Zone 2)</td>
+													<td>6,829,830.40</td>
+													<td>18,750.19</td>
+													<td>1,024</td>
+													<td>0.00</td>
+													<td>88.47</td>
+													<td>18.31</td>
+												</tr>
+												<tr>
+													<td>High Susceptibility (Zone 4)</td>
+													<td>27,932,939.18</td>
+													<td>2,475.40</td>
+													<td>4,188</td>
+													<td>0.00</td>
+													<td>53.04</td>
+													<td>0.59</td>
+												</tr>
+												<tr>
+													<td>Very High Susceptibility (Zone 1)</td>
+													<td>7,510,145.54</td>
+													<td>7,638.20</td>
+													<td>1,126</td>
+													<td>0.00</td>
+													<td>68.60</td>
+													<td>6.78</td>
+												</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<b><blockquote style="color: red">Check the zone column in the above table.</blockquote></b>
+
+<!--Charts-->
+									<div class="chart-container">
+										<div class="chart-wrapper">
+											<canvas id="barChart" width="400" height="200"></canvas>
+										</div>
+										<div class="chart-wrapper">
+											<canvas id="pieChart" width="400" height="200"></canvas>
+										</div>
+									</div>
+
+									<section>
+										<div style="margin: 50px">
+										<ul class="actions fit">
+											<li><a href="results.html" class="button primary fit">Results</a></li>
+										</ul>
+										</div>
+									</section>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Geo Slide Map Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+			</div>
+		<!-- Scripts -->
+			<script src="../assets/js/charts.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+
+	</body>
+</html>

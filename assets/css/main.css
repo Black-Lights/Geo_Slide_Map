@@ -3025,10 +3025,10 @@ input, select, textarea {
 
 .features article .image {
 	border-radius: 50%;
-	display: block;
+	display: flex;
 	margin: 0 auto 1.75em auto;
-	width: 250px;
-	height: 250px;
+	width: auto;
+	height: auto;
 	overflow: hidden;
 }
 
