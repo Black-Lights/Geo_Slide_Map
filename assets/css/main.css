@@ -74,14 +74,12 @@ input, select, textarea {
 
 /* Basic */
 
-	@-ms-viewport {
-		width: device-width;
-	}
+	@media screen and (max-width: 600px) {
 
-	body {
-		-ms-overflow-style: scrollbar;
+		body {
+			-ms-overflow-style: scrollbar;
+		}
 	}
-
 	@media screen and (max-width: 480px) {
 
 		html, body {
@@ -4026,9 +4024,6 @@ input, select, textarea {
 				}
 
 				.wrapper.spotlight .inner {
-					-moz-align-items: -moz-flex-start;
-					-webkit-align-items: -webkit-flex-start;
-					-ms-align-items: -ms-flex-start;
 					align-items: flex-start;
 				}
 
