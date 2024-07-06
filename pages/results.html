@@ -65,18 +65,8 @@
 											<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/susceptibilty_map.png" alt="" /></span></div>
 										</div>
 									</div>
-									<b><blockquote style="color: red">Suggested Map:
 
-										Overall Landslide Susceptibility Map: This map should be placed here to give an overview of the susceptibility zones in Bergamo.</blockquote> </b>
-
-
-									<h3>Case Study</h3>
 									<p>Studying landslide susceptibility in Bergamo, Italy, is essential due to its mountainous terrain, historical landslide events, high population and infrastructure vulnerability, land-use planning considerations, and the need to enhance preparedness and response capabilities. By analyzing susceptibility factors, Bergamo can identify low-risk areas, prioritize mitigation measures, and reduce the impact of landslides on lives, infrastructure, and sustainable development.</p>
-
-									<b><blockquote style="color: red">Suggested Map:
-
-										Historical Landslide Events Map: This map can be placed here to provide context about past landslide occurrences in Bergamo.</blockquote> </b>
-
 
 									<h3 class="major">Output</h3>
 									<p>The output of this study includes a landslide map that depicts the spatial distribution of landslide susceptibility in the region. The map showcases areas of varying levels of susceptibility, ranging from low to high, based on the integrated analysis of multiple layers such as slope, roads, rivers, profile, population, plan, NDVI, faults, land use and land cover, DTM, and aspect. Additionally, the study includes an assessment of the accuracy of the landslide map, ensuring its reliability for decision-making. The results and corresponding layers can be visualized and accessed through a WebGIS platform, allowing stakeholders and the public to interact with the data, understand the findings, and support effective landslide risk management.</p>
@@ -92,23 +82,8 @@
 										</div>
 									</section>
 
-									<b><blockquote style="color: red">Suggested Maps:
-										<ul>
-											<li>Accuracy Assessment Map: This map can show the distribution of correct and incorrect classifications, visually representing the accuracy of the susceptibility model.</li>
-										</ul>
-									</blockquote> </b>
-
 									<h3 class="major">Overall Accuracy</h3>
 									<p>The overall accuracy of <b>68.33%</b> indicates the level of agreement between the predicted landslide susceptibility and the actual landslide occurrences in the study area. This accuracy assessment provides a measure of the reliability and performance of the landslide susceptibility mapping methodology employed in the study. It is important to consider the specific limitations and uncertainties associated with the analysis, as well as the potential for false positives or false negatives. The accuracy assessment serves as an important reference for understanding the strengths and weaknesses of the landslide map and helps in making informed decisions regarding landslide risk management and mitigation strategies.</p>
-
-
-
-									<b><blockquote style="color: red">Suggested Maps:
-										<ul>
-											<li>Slope Map: Shows the gradient of the terrain.</li>
-
-										</ul>
-									</blockquote> </b>
 
 									<h3> Thematic Class/Hazard Analysis</h3>
 
@@ -118,8 +93,8 @@
 											<thead>
 											<tr>
 												<th>Thematic Class/Hazard</th>
-												<th>No Landslide Zone</th>
 												<th>Landslide Zone</th>
+												<th>No Landslide Zone</th>
 												<th>User Accuracy</th>
 												<th>Producer Accuracy</th>
 												<th>Overall Accuracy</th>
@@ -127,19 +102,19 @@
 											</thead>
 											<tbody>
 											<tr>
-												<td>No Landslide Zone</td>
-												<td>94</td>
-												<td>39</td>
-												<td>0.71</td>
-												<td>0.63</td>
+												<td>Landslide Zone</td>
+												<td>111</td>													<td>56</td>
+												<td>0.66</td>
+												<td>0.74</td>
 												<td rowspan="2" style="align-content: center;">0.6833333</td>
 											</tr>
 											<tr>
-												<td>Landslide Zone</td>
-												<td>56</td>
-												<td>111</td>
-												<td>0.66</td>
-												<td>0.74</td>
+												<td>No Landslide Zone</td>
+												<td>39</td>
+												<td>94</td>
+												<td>0.71</td>
+												<td>0.63</td>
+
 											</tr>
 											</tbody>
 										</table>
@@ -154,49 +129,29 @@
 											<tr>
 												<th>Metric</th>
 												<th>Value</th>
-												<th>Formula</th>
 											</tr>
 											</thead>
 											<tbody>
 											<tr>
 												<td>Sensitivity (True Positive Rate)</td>
-												<td>0.74</td>
-												<td>\(\frac{\text{TP}}{\text{TP} + \text{FN}}\)</td>
+												<td>0.67</td>
 											</tr>
 											<tr>
 												<td>Specificity (True Negative Rate)</td>
-												<td>0.63</td>
-												<td>\(\frac{\text{TN}}{\text{TN} + \text{FP}}\)</td>
+												<td>0.71</td>
 											</tr>
 											<tr>
 												<td>Precision</td>
-												<td>0.66</td>
-												<td>\(\frac{\text{TP}}{\text{TP} + \text{FP}}\)</td>
+												<td>0.74</td>
 											</tr>
-											<tr>
-												<td>Negative Predictive Value (NPV)</td>
-												<td>0.71</td>
-												<td>\(\frac{\text{TN}}{\text{TN} + \text{FN}}\)</td>
-											</tr>
-											<tr>
-												<td>False Positive Rate (FPR)</td>
-												<td>0.37</td>
-												<td>\(\frac{\text{FP}}{\text{TN} + \text{FP}}\)</td>
-											</tr>
-											<tr>
-												<td>False Negative Rate (FNR)</td>
-												<td>0.26</td>
-												<td>\(\frac{\text{FN}}{\text{TP} + \text{FN}}\)</td>
-											</tr>
+
 											<tr>
 												<td>F1 Score</td>
 												<td>0.70</td>
-												<td>2 \(\cdot \frac{\text{Precision} \cdot \text{Sensitivity}}{\text{Precision} + \text{Sensitivity}}\)</td>
 											</tr>
 											<tr>
 												<td>Overall Accuracy</td>
 												<td>0.6833</td>
-												<td>\(\frac{\text{TP} + \text{TN}}{\text{Total}}\)</td>
 											</tr>
 											</tbody>
 										</table>
@@ -204,23 +159,13 @@
 
 										<h4>Performance Metrics</h4>
 											<h5>Sensitivity (True Positive Rate)</h5>
-											<p><b>Value:</b> 0.74 | The model correctly identified 74% of the Landslide Zone cases, demonstrating good detection capability.</p>
+											<p><b>Value:</b> 0.67 | The model correctly identified 74% of the Landslide Zone cases, demonstrating good detection capability.</p>
 
 											<h5>Specificity (True Negative Rate)</h5>
-											<p><b>Value:</b> 0.63 | The model correctly identified 63% of the No Landslide Zone cases, showing moderate effectiveness in avoiding false positives.</p>
+											<p><b>Value:</b> 0.71 | The model correctly identified 63% of the No Landslide Zone cases, showing moderate effectiveness in avoiding false positives.</p>
 
 											<h5>Precision</h5>
-											<p><b>Value:</b> 0.66 | 66% of the predicted Landslide Zone cases were correct, reflecting moderate confidence in positive predictions.</p>
-
-											<h5>Negative Predictive Value (NPV)</h5>
-											<p><b>Value:</b> 0.71 | 71% of the predicted No Landslide Zone cases were correct, indicating a good level of confidence in negative predictions.</p>
-
-
-											<h5>False Positive Rate (FPR)</h5>
-											<p><b>Value:</b> 0.37 | 37% of actual No Landslide Zone cases were incorrectly classified as Landslide Zone, indicating a higher incidence of false positives.</p>
-
-											<h5>False Negative Rate (FNR)</h5>
-											<p><b>Value:</b> 0.26 | 26% of actual Landslide Zone cases were missed by the model, showing a moderate false negative rate.</p>
+											<p><b>Value:</b> 0.74 | 66% of the predicted Landslide Zone cases were correct, reflecting moderate confidence in positive predictions.</p>
 
 											<h5>F1 Score</h5>
 											<p><b>Value:</b> 0.70 | The F1 Score of 0.70 reflects a balanced performance between precision and sensitivity.</p>
@@ -231,18 +176,11 @@
 										<h4>Accuracy Metrics</h4>
 										<ul>
 											<li><b>User Accuracy for No Landslide Zone:</b> 0.71</li>
-											<li><b>Producer Accuracy for No Landslide Zone:</b> 0.71</li>
-											<li><b>User Accuracy for Landslide Zone:</b> 0.74</li>
+											<li><b>Producer Accuracy for No Landslide Zone:</b> 0.63</li>
+											<li><b>User Accuracy for Landslide Zone:</b> 0.66</li>
 											<li><b>Producer Accuracy for Landslide Zone:</b> 0.74</li>
 											<li><b>Overall Accuracy:</b> 0.6833</li>
 										</ul>
-
-									<b><blockquote style="color: red">Suggested Maps:
-										<ul>
-											<li>Confusion Matrix Visualization: This can be a graphical representation of the confusion matrix, highlighting areas of correct and incorrect classifications.</li>
-
-										</ul>
-									</blockquote> </b>
 
 									<h3>Population Distribution Analysis</h3>
 									<p>The "Zonal Statistics" tool revealed the distribution of the population across susceptibility zones (low, moderate, high, very high). This analysis identified the proportion of the population in each risk category, highlighting high-risk areas for targeted risk management strategies.</p>
@@ -306,8 +244,6 @@
 											</table>
 										</div>
 
-									<b><blockquote style="color: red">Check the zone column in the above table.</blockquote></b>
-
 									<!--Charts-->
 										<div class="chart-container">
 											<div class="chart-wrapper">
@@ -333,39 +269,6 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
 							<ul class="copyright">
 								<li>&copy; Geo Slide Map Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>

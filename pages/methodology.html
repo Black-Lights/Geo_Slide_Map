@@ -60,7 +60,6 @@
 
 								<section>
 									<h2 class="major">Introduction</h2>
-									<b><BLOCKQUOTE style="color: red">Decide the above heading whether it should be introduction or something else.</BLOCKQUOTE> </b>
 									<p>The methodology employed for this project involves a comprehensive analysis of various geospatial data layers to produce a detailed landslide susceptibility map. The process integrates data collection, preprocessing, analysis, classification, modeling, and accuracy assessment to ensure reliable and actionable insights for landslide risk management.</p>
 									<h3>Data Collection and Preprocessing</h3>
 										<ol>
@@ -89,15 +88,11 @@
 									<h3>Data Analysis</h3>
 										<ol>
 <!--Aspect-->
-											<B><li>Aspect Analysis</li></B>
-											<h4>Aspect Analysis</h4>
-											<b><blockquote style="color: red"> Decide which heading is better</blockquote></b>
-
+											<B><li><h4>Aspect Analysis</h4></li></B>
 											<P> Aspect refers to the compass direction that a slope faces and significantly influences landslide susceptibility by affecting moisture distribution, sun exposure, vegetation patterns, snow accumulation and melt, and erosion patterns. </P>
 											<div class="box alt">
 												<div class="row gtr-uniform">
 													<div class="col-12"><span class="image fit" style="max-width: 85%; margin: 0 auto !important;"><img src="../images/data/aspect.png" alt="" /></span></div>
-
 												</div>
 											</div>
 											<p>Here is a detailed explanation of how aspect impacts landslide susceptibility mapping:</p>
@@ -112,7 +107,7 @@
 													<p>Aspect can affect erosion patterns on slopes due to variations in wind and water exposure. Erosion processes remove soil or rock from the slope, weakening its stability. Differences in erosion related to aspect can influence the overall susceptibility to landslides.</p></li>
 												</ul>
 <!--Slope-->
-											<b><li>Slope Analysis:</li></b>
+											<b><li><h4>Slope Analysis:</h4></li></b>
 <!--											<h4>Slope Analysis:</h4>-->
 											<p>Steep slopes increase the likelihood of landslides due to reduced stability and weaker resistance to gravitational forces. Slope plays a fundamental role in landslide susceptibility mapping, which aims to identify areas more prone to landslides based on various contributing factors.</p>
 											<div class="box alt">
@@ -139,7 +134,7 @@
 											<p>It is important to note that landslide susceptibility mapping is a complex process that requires the integration of multiple factors and data sources. Slope steepness, derived from DTMs, is just one aspect among many that contribute to the overall understanding of landslide susceptibility in a given area.</p>
 
 <!--DUSAF-->
-											<b><li>Land Use and Land Cover Analysis:</li></b>
+											<b><li><h4>Land Use and Land Cover Analysis:</h4></li></b>
 											<p>Land use and land cover significantly influence landslide susceptibility mapping by impacting slope stability through vegetation cover, soil erosion, urbanization, and water management practices.</p>
 											<div class="box alt">
 												<div class="row gtr-uniform">
@@ -158,7 +153,7 @@
 
 <!--Fault-->
 												</ul>
-											<b><li>Fault Analysis:</li></b>
+											<b><li><h4>Fault Analysis:</h4></li></b>
 											<p>Faults, which are geological fractures in the Earth's crust, can significantly influence landslide susceptibility mapping by creating zones of weakness and potential failure along their boundaries. </p>
 												<div class="box alt">
 													<div class="row gtr-uniform">
@@ -181,7 +176,7 @@
 											<p>Understanding the presence, characteristics, and activity of faults is crucial in landslide susceptibility mapping. It helps identify areas where slope stability may be compromised and aids in assessing the potential risks associated with landslides.</p>
 
 <!--NDVI-->
-											<b><li>Vegetation Health Analysis:</li></b>
+											<b><li><h4>Vegetation Health Analysis:</h4></li></b>
 												<p>The Normalized Difference Vegetation Index (NDVI) is a remote sensing technique used in landslide susceptibility mapping to assess vegetation health and density, providing insights into slope stability and erosion control. NDVI significantly impacts landslide susceptibility mapping by highlighting areas of robust vegetation cover and identifying regions at higher risk due to sparse vegetation. </p>
 													<div class="box alt">
 														<div class="row gtr-uniform">
@@ -398,34 +393,20 @@
 												<tbody>
 												<tr>
 													<td>Sensitivity (True Positive Rate)</td>
-													<td>0.74</td>
+													<td>0.67</td>
 													<td>\(\frac{\text{TP}}{\text{TP} + \text{FN}}\)</td>
 												</tr>
 												<tr>
 													<td>Specificity (True Negative Rate)</td>
-													<td>0.63</td>
+													<td>0.71</td>
 													<td>\(\frac{\text{TN}}{\text{TN} + \text{FP}}\)</td>
 												</tr>
 												<tr>
 													<td>Precision</td>
-													<td>0.66</td>
+													<td>0.74</td>
 													<td>\(\frac{\text{TP}}{\text{TP} + \text{FP}}\)</td>
 												</tr>
-												<tr>
-													<td>Negative Predictive Value (NPV)</td>
-													<td>0.71</td>
-													<td>\(\frac{\text{TN}}{\text{TN} + \text{FN}}\)</td>
-												</tr>
-												<tr>
-													<td>False Positive Rate (FPR)</td>
-													<td>0.37</td>
-													<td>\(\frac{\text{FP}}{\text{TN} + \text{FP}}\)</td>
-												</tr>
-												<tr>
-													<td>False Negative Rate (FNR)</td>
-													<td>0.26</td>
-													<td>\(\frac{\text{FN}}{\text{TP} + \text{FN}}\)</td>
-												</tr>
+
 												<tr>
 													<td>F1 Score</td>
 													<td>0.70</td>
@@ -472,37 +453,6 @@
 												</p>
 												<p><b>Interpretation:</b> Of all the cases predicted as Landslide Zone, 66% were correctly identified as such. This reflects a moderate level of confidence in the positive predictions made by the model.</p>
 											</div>
-
-											<div class="metric">
-												<h5>Negative Predictive Value (NPV)</h5>
-												<p><b>Definition:</b> NPV measures the proportion of predicted negative cases that are actually negative.</p>
-												<p><b>Calculation:</b></p>
-												<p class="formula">
-													NPV = \(\frac{\text{TN}}{\text{TN} + \text{FN}}\) = \(\frac{94}{94 + 39}\) ≈ 0.71
-												</p>
-												<p><b>Interpretation:</b> Of all the cases predicted as No Landslide Zone, 71% were correctly identified as such. This indicates a reasonable level of confidence in the negative predictions made by the model.</p>
-											</div>
-
-											<div class="metric">
-												<h5>False Positive Rate (FPR)</h5>
-												<p><b>Definition:</b> FPR measures the proportion of actual negative cases that were incorrectly identified as positive.</p>
-												<p><b>Calculation:</b></p>
-												<p class="formula">
-													FPR = \(\frac{\text{FP}}{\text{TN} + \text{FP}}\) = \(\frac{56}{94 + 39}\) ≈ 0.42
-												</p>
-												<p><b>Interpretation:</b> 37% of actual No Landslide Zone cases were incorrectly classified as Landslide Zone. This suggests a higher incidence of false positives.</p>
-											</div>
-
-											<div class="metric">
-												<h5>False Negative Rate (FNR)</h5>
-												<p><b>Definition:</b> FNR measures the proportion of actual positive cases that were incorrectly identified as negative.</p>
-												<p><b>Calculation:</b></p>
-												<p class="formula">
-													FNR = \(\frac{\text{FN}}{\text{TP} + \text{FN}}\) = \(\frac{39}{111 + 39}\) ≈ 0.26
-												</p>
-												<p><b>Interpretation:</b> 26% of actual Landslide Zone cases were incorrectly classified as No Landslide Zone. This indicates that the model misses a significant portion of true positive instances.</p>
-											</div>
-
 											<div class="metric">
 												<h5>F1 Score</h5>
 												<p><b>Definition:</b> The F1 Score is the harmonic mean of precision and sensitivity, providing a single metric that balances the two aspects of model performance.</p>
@@ -530,15 +480,11 @@
 										<h4>Accuracy Metrics</h4>
 										<ul>
 											<li><b>User Accuracy for No Landslide Zone:</b> 0.71</li>
-											<li><b>Producer Accuracy for No Landslide Zone:</b> 0.71</li>
-											<li><b>User Accuracy for Landslide Zone:</b> 0.74</li>
+											<li><b>Producer Accuracy for No Landslide Zone:</b> 0.63</li>
+											<li><b>User Accuracy for Landslide Zone:</b> 0.66</li>
 											<li><b>Producer Accuracy for Landslide Zone:</b> 0.74</li>
 											<li><b>Overall Accuracy:</b> 0.6833</li>
 										</ul>
-
-
-									<b><blockquote style="color: red">We need to check Error Matrix or  table of accuracy here.</blockquote></b>
-										<p>The accuracy assessment helps us to understand the reliability and precision of the landslide susceptibility model, ensuring that the predictions made by the model are trustworthy and actionable for risk management purposes.</p>
 
 <!--Population Data-->
 									<h3>Population Data Integration and Analysis</h3>
@@ -637,8 +583,6 @@
 											</table>
 										</div>
 
-										<b><blockquote style="color: red">Check the zone column in the above table.</blockquote></b>
-
 <!--Charts-->
 									<div class="chart-container">
 										<div class="chart-wrapper">
@@ -665,39 +609,6 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
 							<ul class="copyright">
 								<li>&copy; Geo Slide Map Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
