@@ -443,7 +443,7 @@ let ndvi = new Image({
     title: "NDVI",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:ndvi', 'STYLES': 'ndvi' }
+        params: { 'LAYERS': 'gisgeoserver_17:ndvi', 'STYLES': 'gisgeoserver_17:ndvi' }
     }),
     visible: false
 });
@@ -452,7 +452,7 @@ let aspect = new Image({
     title: "Aspect",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:aspect', 'STYLES': 'aspect' }
+        params: { 'LAYERS': 'gisgeoserver_17:aspect', 'STYLES': 'gisgeoserver_17:aspect' }
     }),
     visible: false
 });
@@ -461,7 +461,7 @@ let dusaf = new Image({
     title: "DUSAF",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:dusaf', 'STYLES': 'dusaf' }
+        params: { 'LAYERS': 'gisgeoserver_17:dusaf', 'STYLES': 'gisgeoserver_17:dusaf' }
     }),
     visible: false
 });
@@ -479,7 +479,7 @@ let plan = new Image({
     title: "Plan",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:plan', 'STYLES': 'plan' }
+        params: { 'LAYERS': 'gisgeoserver_17:plan', 'STYLES': 'gisgeoserver_17:plan' }
     }),
     visible: false
 });
@@ -488,7 +488,7 @@ let profile = new Image({
     title: "Profile",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:profile', 'STYLES': 'profile' }
+        params: { 'LAYERS': 'gisgeoserver_17:profile', 'STYLES': 'gisgeoserver_17:profile' }
     }),
     visible: false
 });
@@ -515,7 +515,7 @@ let slope = new Image({
     title: "Slope",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:slope', 'STYLES': 'slope' }
+        params: { 'LAYERS': 'gisgeoserver_17:slope', 'STYLES': 'gisgeoserver_17:slope' }
     }),
     visible: false
 });
@@ -551,7 +551,7 @@ var population = new Image({
     title: "Population",
     source: new ImageWMS({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
-        params: { 'LAYERS': 'gisgeoserver_17:population', 'STYLES': 'gisgeoserver_17:population' }
+        params: { 'LAYERS': 'gisgeoserver_17:population' }
     }),
     visible: false
 });
@@ -671,100 +671,100 @@ basemapLayers.getLayers().extend([stadiaWatercolor, stadiaToner]);
 //     let opacity = parseFloat(this.value);
 //     nolandSlideZone.setOpacity(opacity);
 // });
-
-// Add the WFS layer
-let vectorSource = new VectorSource({});
-const vectorLayer = new Vector({
-    title: "Population",
-    source: vectorSource,
-    zIndex: 10
-});
-overlayLayers.getLayers().extend([vectorLayer]);
-
-// This allows the function to be used in a callback
-function loadFeatures(response) {
-    vectorSource.addFeatures(new GeoJSON().readFeatures(response));
-}
-
-// This is not a good practice, but it works for the jsonp.
-window.loadFeatures = loadFeatures;
-
-var base_url = "https://www.gis-geoserver.polimi.it/geoserver/gisgeoserver_17/ows?";
-var wfs_url = base_url +
-    "service=WFS&" +
-    "version=2.0.0&" +
-    "request=GetFeature&" +
-    "typeName=gisgeoserver_17:population&" +
-    "outputFormat=text/javascript&" +
-    "srsname=EPSG:3857&" +
-    "format_options=callback:loadFeatures";
-
-// This will request the WFS layer once the map is rendered
-map.once('postrender', function (event) {
-    // Load the WFS layer
-    $.ajax({ url: wfs_url, dataType: 'jsonp' });
-});
-
-// Add the code for the Pop-up
-var container = document.getElementById('popup');
-var content = document.getElementById('popup-content');
-var closer = document.getElementById('popup-closer');
-
-var popup = new Overlay({
-    element: container
-});
-map.addOverlay(popup);
-
-// Ensure that jQuery ($) is already available in the page
-$(document).ready(function () {
-    map.on('singleclick', function (event) {
-        // This iterates over all the features that are located on the pixel of the click (can be many)
-        var feature = map.forEachFeatureAtPixel(event.pixel, function (feature, layer) {
-            return feature;
-        });
-
-        // If there is a feature, open the popup by setting a position to it and put the data from the feature
-        if (feature != null) {
-            var pixel = event.pixel;
-            var coord = map.getCoordinateFromPixel(pixel);
-            popup.setPosition(coord);
-            content.innerHTML =
-                '<h5>Feature Information</h5><br><b>Name: </b>' +
-                feature.get('NAME') +
-                '<br><b>Description: </b>' +
-                feature.get('HYC_DESCRI');
-        } else {
-            // Only if the roads layer is visible, do the GetFeatureInfo request
-            if (roads.getVisible()) {
-                var viewResolution = map.getView().getResolution();
-                var url = roads.getSource().getFeatureInfoUrl(
-                    event.coordinate,
-                    viewResolution,
-                    'EPSG:3857',
-                    { 'INFO_FORMAT': 'text/html' }
-                );
-
-                if (url) {
-                    var pixel = event.pixel;
-                    var coord = map.getCoordinateFromPixel(pixel);
-                    popup.setPosition(coord);
-                    // We do again the AJAX request to get the data from the GetFeatureInfo request
-                    $.ajax({ url: url }).done(function (data) {
-                        // Put the data of the GetFeatureInfo response inside the pop-up
-                        content.innerHTML = data;
-                    });
-                }
-            }
-        }
-    });
-});
-
-// The click event handler for closing the popup
-closer.onclick = function () {
-    popup.setPosition(undefined);
-    closer.blur();
-    return false;
-};
+//
+// // Add the WFS layer
+// let vectorSource = new VectorSource({});
+// const vectorLayer = new Vector({
+//     title: "Population",
+//     source: vectorSource,
+//     zIndex: 10
+// });
+// overlayLayers.getLayers().extend([vectorLayer]);
+//
+// // This allows the function to be used in a callback
+// function loadFeatures(response) {
+//     vectorSource.addFeatures(new GeoJSON().readFeatures(response));
+// }
+//
+// // This is not a good practice, but it works for the jsonp.
+// window.loadFeatures = loadFeatures;
+//
+// var base_url = "https://www.gis-geoserver.polimi.it/geoserver/gisgeoserver_17/ows?";
+// var wfs_url = base_url +
+//     "service=WFS&" +
+//     "version=2.0.0&" +
+//     "request=GetFeature&" +
+//     "typeName=gisgeoserver_17:population&" +
+//     "outputFormat=text/javascript&" +
+//     "srsname=EPSG:3857&" +
+//     "format_options=callback:loadFeatures";
+//
+// // This will request the WFS layer once the map is rendered
+// map.once('postrender', function (event) {
+//     // Load the WFS layer
+//     $.ajax({ url: wfs_url, dataType: 'jsonp' });
+// });
+//
+// // Add the code for the Pop-up
+// var container = document.getElementById('popup');
+// var content = document.getElementById('popup-content');
+// var closer = document.getElementById('popup-closer');
+//
+// var popup = new Overlay({
+//     element: container
+// });
+// map.addOverlay(popup);
+//
+// // Ensure that jQuery ($) is already available in the page
+// $(document).ready(function () {
+//     map.on('singleclick', function (event) {
+//         // This iterates over all the features that are located on the pixel of the click (can be many)
+//         var feature = map.forEachFeatureAtPixel(event.pixel, function (feature, layer) {
+//             return feature;
+//         });
+//
+//         // If there is a feature, open the popup by setting a position to it and put the data from the feature
+//         if (feature != null) {
+//             var pixel = event.pixel;
+//             var coord = map.getCoordinateFromPixel(pixel);
+//             popup.setPosition(coord);
+//             content.innerHTML =
+//                 '<h5>Feature Information</h5><br><b>Name: </b>' +
+//                 feature.get('NAME') +
+//                 '<br><b>Description: </b>' +
+//                 feature.get('HYC_DESCRI');
+//         } else {
+//             // Only if the roads layer is visible, do the GetFeatureInfo request
+//             if (roads.getVisible()) {
+//                 var viewResolution = map.getView().getResolution();
+//                 var url = roads.getSource().getFeatureInfoUrl(
+//                     event.coordinate,
+//                     viewResolution,
+//                     'EPSG:3857',
+//                     { 'INFO_FORMAT': 'text/html' }
+//                 );
+//
+//                 if (url) {
+//                     var pixel = event.pixel;
+//                     var coord = map.getCoordinateFromPixel(pixel);
+//                     popup.setPosition(coord);
+//                     // We do again the AJAX request to get the data from the GetFeatureInfo request
+//                     $.ajax({ url: url }).done(function (data) {
+//                         // Put the data of the GetFeatureInfo response inside the pop-up
+//                         content.innerHTML = data;
+//                     });
+//                 }
+//             }
+//         }
+//     });
+// });
+//
+// // The click event handler for closing the popup
+// closer.onclick = function () {
+//     popup.setPosition(undefined);
+//     closer.blur();
+//     return false;
+// };
 
 // Adding map event for pointermove
 map.on('pointermove', function (event) {
