@@ -1,5 +1,5 @@
-// // Wait for the DOM to be fully loaded
-// document.addEventListener('DOMContentLoaded', function() {
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
     // Data for the charts
     const labels = ['Low Susceptibility', 'Moderate Susceptibility', 'High Susceptibility', 'Very High Susceptibility'];
     const areaData = [6109496.73, 6829830.40, 27932939.18, 7510145.54];
@@ -94,4 +94,4 @@
             }
         }
     });
-// });
+});
