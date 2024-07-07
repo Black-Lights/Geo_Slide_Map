@@ -167,26 +167,26 @@ let overlayLayers = new Group({
 let processingLayers = new Group({
     title: "Processing layers",
     layers: [
-        dtm,
-        ndvi,
-        aspect,
-        dusaf,
-        faults,
-        plan,
-        profile,
-        rivers,
+        slope,
         roads,
-        slope
+        rivers,
+        profile,
+        plan,
+        faults,
+        dusaf,
+        aspect,
+        ndvi,
+        dtm
     ]
 });
 
 let results = new Group({
     title: "Results",
     layers: [
-        nolandSlideZone,
+        population,
         confidence,
-        landslideSusceptibilityMap,
-        population
+        nolandSlideZone,
+        landslideSusceptibilityMap
     ]
 });
 
