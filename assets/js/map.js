@@ -215,8 +215,8 @@ map.addControl(new MousePosition({
 var layerSwitcher = new LayerSwitcher({
     activationMode: 'click',
     startActive: false,
-    tipLabel: 'Legend', // Optional label for button
-    collapseTipLabel: 'Collapse legend', // Optional label for button
+    tipLabel: 'Open Layers', // Optional label for button
+    collapseTipLabel: 'Collapse Layers', // Optional label for button
     target: document.getElementById('layer-switcher')
 });
 map.addControl(layerSwitcher);
