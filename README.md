@@ -70,6 +70,7 @@ Credits:
 
 	Icons:
 		Font Awesome (fontawesome.io)
+            https://www.freepik.com/
 
 	Other:
 		jQuery (jquery.com)
