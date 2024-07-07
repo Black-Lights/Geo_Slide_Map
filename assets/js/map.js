@@ -23,6 +23,7 @@ let areaOfIntrest = new Image({
         url: 'https://www.gis-geoserver.polimi.it/geoserver/wms',
         params: { 'LAYERS': 'gisgeoserver_17:Group_18', 'STYLES': 'polygon' }
     }),
+    opacity: 0.1,
     visible: false
 });
 
